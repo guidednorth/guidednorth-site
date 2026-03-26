@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Guided North Consulting | Digital Strategy for Nonprofits &amp; Mission-Driven Organizations</title>
+<meta name="description" content="Guided North Consulting brings senior digital strategy, CRM activation, AI advisory, and digital experience expertise to nonprofits, civic organizations, and mission-driven businesses. Based in Minneapolis, MN.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.guidednorth.com/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.guidednorth.com/">
+<meta property="og:title" content="Guided North Consulting | Digital Strategy for Nonprofits &amp; Mission-Driven Organizations">
+<meta property="og:description" content="Clear direction. Practical execution. Real impact. Senior digital leadership for nonprofits, civic organizations, and mission-driven businesses.">
+<meta property="og:site_name" content="Guided North Consulting">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Guided North Consulting | Digital Strategy for Nonprofits">
+<meta name="twitter:description" content="Clear direction. Practical execution. Real impact. Senior digital leadership for organizations doing good work.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Guided North Consulting",
+  "description": "Digital strategy, CRM activation, AI advisory, and digital experience consulting for nonprofits, civic organizations, and mission-driven businesses.",
+  "url": "https://www.guidednorth.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Minneapolis",
+    "addressRegion": "MN",
+    "addressCountry": "US"
+  },
+  "areaServed": "US",
+  "serviceType": [
+    "Digital Strategy",
+    "CRM and Data Activation",
+    "AI Advisory",
+    "Digital Experience Consulting"
+  ],
+  "knowsAbout": [
+    "Nonprofit digital strategy",
+    "CRM activation",
+    "AI advisory",
+    "Digital product management",
+    "UX consulting"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/craigpaulnock/"
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --blue: #2D6A9F;
+    --blue-dark: #1f4d75;
+    --blue-light: #ddeaf6;
+    --green: #236B43;
+    --green-dark: #1a5233;
+    --green-light: #ddf0e6;
+    --dark: #111920;
+    --mid: #2e3d48;
+    --muted: #4a5e6b;
+    --warm: #f7f4f0;
+    --white: #ffffff;
+    --border: rgba(17,25,32,0.15);
+    --shadow-sm: 0 2px 8px rgba(17,25,32,0.07);
+    --shadow-md: 0 8px 32px rgba(17,25,32,0.10);
+    --radius: 12px;
+    --radius-lg: 20px;
+    --focus-ring: 0 0 0 3px rgba(45,106,159,0.45);
+    --space-section: clamp(64px, 10vw, 100px);
+    --space-inner: clamp(1.25rem, 5vw, 5rem);
+    --max-width: 1100px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -100%; left: 1rem;
+    background: var(--blue); color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 6px 6px;
+    font-size: 0.875rem; font-weight: 500;
+    text-decoration: none; z-index: 200;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 0; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 var(--space-inner);
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: var(--shadow-sm); }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.875rem; font-weight: 400; color: var(--mid);
+    text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta {
+    background: var(--blue) !important; color: var(--white) !important;
+    padding: 0.45rem 1.1rem !important; border-radius: 6px !important; font-weight: 500 !important;
+  }
+  .nav-cta:hover { background: var(--blue-dark) !important; }
+
+  .nav-toggle {
+    display: none; flex-direction: column; justify-content: center; gap: 5px;
+    width: 36px; height: 36px; background: none; border: none;
+    cursor: pointer; padding: 4px; border-radius: 6px;
+  }
+  .nav-toggle span {
+    display: block; width: 22px; height: 2px;
+    background: var(--dark); border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s; transform-origin: center;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none; position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: var(--white); border-bottom: 1px solid var(--border);
+    padding: 1.25rem var(--space-inner) 1.5rem;
+    z-index: 99; box-shadow: var(--shadow-md);
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul { list-style: none; display: flex; flex-direction: column; }
+  .mobile-menu a {
+    display: block; padding: 0.75rem 0;
+    font-size: 1rem; font-weight: 400; color: var(--mid);
+    text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--blue); }
+  .mobile-menu .mobile-cta {
+    display: block; margin-top: 1rem;
+    background: var(--blue); color: var(--white) !important;
+    padding: 0.75rem 1.25rem; border-radius: 8px;
+    font-weight: 500; text-align: center; border: none;
+  }
+  .mobile-menu .mobile-cta:hover { background: var(--blue-dark); }
+
+  /* HERO */
+  .hero {
+    min-height: 100svh; display: flex; align-items: center;
+    padding: calc(64px + clamp(2.5rem, 8vw, 5rem)) var(--space-inner) clamp(3rem, 8vw, 5rem);
+    background: var(--warm); position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -20%; right: -10%;
+    width: min(600px, 80vw); height: min(600px, 80vw); border-radius: 50%;
+    background: radial-gradient(circle, rgba(45,106,159,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: ''; position: absolute; bottom: -10%; left: 10%;
+    width: min(400px, 60vw); height: min(400px, 60vw); border-radius: 50%;
+    background: radial-gradient(circle, rgba(35,107,67,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: var(--max-width); margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 5rem); align-items: center;
+  }
+
+  .hero-eyebrow {
+    font-size: clamp(0.7rem, 1.5vw, 0.85rem); font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--green);
+    margin-bottom: 1.25rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.15; color: var(--dark); margin-bottom: 1.25rem;
+    opacity: 0; animation: fadeUp 0.8s 0.35s forwards;
+  }
+  .hero-heading em { font-style: italic; color: var(--blue); }
+
+  .hero-sub {
+    font-size: clamp(0.95rem, 2vw, 1.1rem); color: var(--mid);
+    line-height: 1.75; margin-bottom: 2rem; max-width: 480px;
+    opacity: 0; animation: fadeUp 0.8s 0.5s forwards;
+  }
+  .hero-actions {
+    display: flex; gap: 0.75rem; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.8s 0.65s forwards;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: var(--blue); color: var(--white);
+    padding: 0.8rem 1.5rem; border-radius: 8px;
+    font-size: clamp(0.875rem, 2vw, 0.95rem); font-weight: 500;
+    text-decoration: none; transition: background 0.2s, transform 0.15s; white-space: nowrap;
+  }
+  .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: transparent; color: var(--dark);
+    padding: 0.8rem 1.5rem; border-radius: 8px;
+    font-size: clamp(0.875rem, 2vw, 0.95rem); font-weight: 400;
+    text-decoration: none; border: 1.5px solid rgba(17,25,32,0.3);
+    transition: border-color 0.2s, color 0.2s, transform 0.15s; white-space: nowrap;
+  }
+  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+
+  .hero-visual {
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; animation: fadeIn 1s 0.7s forwards;
+  }
+  .hero-card-stack { position: relative; width: clamp(260px, 35vw, 340px); height: clamp(300px, 40vw, 380px); }
+  .hero-card {
+    position: absolute; background: var(--white);
+    border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 1.5rem;
+  }
+  .hero-card-1 { width: 82%; top: 0; left: 8%; transform: rotate(-3deg); border-top: 3px solid var(--blue); }
+  .hero-card-2 { width: 82%; bottom: 0; right: 0; transform: rotate(2deg); border-top: 3px solid var(--green); }
+  .hero-card-dot { width: 8px; height: 8px; border-radius: 50%; margin-bottom: 0.75rem; }
+  .hero-card-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+  .hero-card-title { font-family: 'DM Serif Display', serif; font-size: clamp(0.95rem, 2vw, 1.1rem); color: var(--dark); margin-bottom: 0.4rem; }
+  .hero-card-body { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+  /* SECTIONS */
+  section { padding: var(--space-section) var(--space-inner); }
+  .section-inner { max-width: var(--max-width); margin: 0 auto; }
+  .section-eyebrow { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin-bottom: 0.85rem; }
+  .section-heading { font-family: 'DM Serif Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.5rem); color: var(--dark); line-height: 1.2; margin-bottom: 1.25rem; }
+  .section-heading em { font-style: italic; color: var(--blue); }
+  .section-lead { font-size: clamp(0.95rem, 2vw, 1.05rem); color: var(--mid); max-width: 600px; line-height: 1.8; }
+
+  /* ABOUT */
+  .about { background: var(--white); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 6vw, 6rem); align-items: start;
+    margin-top: clamp(2rem, 4vw, 4rem);
+  }
+  .about-text p { color: var(--mid); margin-bottom: 1.2rem; line-height: 1.85; font-size: clamp(0.9rem, 2vw, 1rem); }
+  .about-text p strong { color: var(--dark); font-weight: 500; }
+  .about-cta-group { margin-top: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .about-cta-group a { align-self: flex-start; font-size: 0.875rem; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-card { background: var(--warm); border-radius: var(--radius); padding: clamp(1rem, 2vw, 1.5rem); border-left: 3px solid var(--blue); }
+  .stat-card.green { border-left-color: var(--green); }
+  .stat-number { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--dark); line-height: 1; margin-bottom: 0.3rem; }
+  .stat-label { font-size: 0.82rem; color: var(--mid); line-height: 1.4; }
+
+  /* SERVICES */
+  .services { background: var(--warm); }
+  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: clamp(2rem, 4vw, 3.5rem); }
+  .service-card {
+    background: var(--white); border-radius: var(--radius-lg);
+    padding: clamp(1.25rem, 3vw, 2rem); box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.25s, transform 0.25s; border-top: 3px solid transparent;
+  }
+  .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .service-card:nth-child(odd) { border-top-color: var(--blue); }
+  .service-card:nth-child(even) { border-top-color: var(--green); }
+  .service-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.25rem; }
+  .service-card:nth-child(odd) .service-icon { background: var(--blue-light); }
+  .service-card:nth-child(even) .service-icon { background: var(--green-light); }
+  .service-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.05rem, 2vw, 1.2rem); color: var(--dark); margin-bottom: 0.6rem; }
+  .service-desc { font-size: clamp(0.85rem, 1.5vw, 0.93rem); color: var(--mid); line-height: 1.75; }
+
+  /* WHO */
+  .who { background: var(--white); }
+  .who-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: clamp(2rem, 4vw, 3.5rem); }
+  .who-card {
+    border: 1.5px solid var(--border); border-radius: var(--radius);
+    padding: clamp(1rem, 2vw, 1.5rem) 1rem; text-align: center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .who-card:hover { border-color: var(--blue); box-shadow: var(--shadow-sm); }
+  .who-icon { font-size: 1.6rem; margin-bottom: 0.6rem; display: block; }
+  .who-title { font-weight: 500; font-size: 0.875rem; color: var(--dark); line-height: 1.4; }
+
+  /* WHY */
+  .why { background: var(--dark); color: var(--white); }
+  .why .section-eyebrow { color: #5dbf8a; }
+  .why .section-heading { color: var(--white); }
+  .why .section-heading em { color: #6aaedb; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: clamp(2rem, 4vw, 3.5rem); }
+  .why-item { padding: clamp(1.25rem, 2vw, 1.75rem); border-radius: var(--radius); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
+  .why-num { font-family: 'Syne', sans-serif; font-size: 2.25rem; font-weight: 700; color: rgba(106,174,219,0.35); line-height: 1; margin-bottom: 0.85rem; }
+  .why-title { font-weight: 500; font-size: 1rem; color: rgba(255,255,255,0.92); margin-bottom: 0.4rem; }
+  .why-body { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+  /* CONTACT */
+  .contact { background: var(--warm); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; margin-top: clamp(2rem, 4vw, 3.5rem); }
+  .contact-info p { font-size: clamp(0.9rem, 2vw, 1rem); color: var(--mid); line-height: 1.8; margin-bottom: 1.75rem; }
+  .contact-detail {
+    display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    font-size: 0.92rem; color: var(--mid); text-decoration: none; transition: color 0.2s; border-radius: 6px;
+  }
+  .contact-detail:hover { color: var(--blue); }
+  .contact-detail-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--white); display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: var(--shadow-sm); flex-shrink: 0; }
+
+  /* FORM */
+  .contact-form { background: var(--white); border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: var(--shadow-md); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+  label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em; color: var(--mid); text-transform: uppercase; }
+  label .req { color: #b91c1c; margin-left: 2px; font-size: 0.85em; }
+  input, textarea, select {
+    font-family: 'DM Sans', sans-serif; font-weight: 400;
+    color: var(--dark); background: var(--warm);
+    border: 1.5px solid rgba(17,25,32,0.2); border-radius: 8px; padding: 0.75rem 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%;
+    font-size: max(16px, 1rem);
+  }
+  input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shadow: var(--focus-ring); }
+  input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #b91c1c; box-shadow: 0 0 0 3px rgba(185,28,28,0.15); }
+  .field-error { font-size: 0.82rem; color: #b91c1c; margin-top: 0.2rem; display: none; }
+  .field-error.visible { display: block; }
+  textarea { resize: vertical; min-height: 110px; }
+  .form-submit {
+    width: 100%; background: var(--blue); color: var(--white);
+    border: none; border-radius: 8px; padding: 0.9rem 1.5rem;
+    font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
+    margin-top: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    min-height: 52px;
+  }
+  .form-submit:hover { background: var(--blue-dark); transform: translateY(-1px); }
+  .form-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+  .form-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 0.75rem; line-height: 1.5; }
+  .form-success { display: none; text-align: center; padding: clamp(1.5rem, 4vw, 2.5rem) 2rem; background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+  .form-success-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .form-success h3 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--dark); margin-bottom: 0.5rem; }
+  .form-success p { font-size: 0.95rem; color: var(--muted); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark); color: rgba(255,255,255,0.45);
+    padding: clamp(1.25rem, 3vw, 2rem) var(--space-inner);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.75rem;
+  }
+  .footer-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  footer p { font-size: 0.75rem; letter-spacing: 0.02em; }
+  .footer-link { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.75rem; transition: color 0.2s; }
+  .footer-link:hover { color: rgba(255,255,255,0.8); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .reveal, .hero-eyebrow, .hero-heading, .hero-sub, .hero-actions, .hero-visual { opacity: 1; transform: none; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .hero-heading { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+    .hero-actions { flex-direction: column; }
+    .hero-actions a { width: 100%; justify-content: center; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    .about-cta-group a { align-self: stretch; text-align: center; justify-content: center; }
+    .services-grid { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  }
+
+  @media (min-width: 1400px) { :root { --space-inner: 8vw; } }
+  @media (min-width: 1800px) { :root { --space-inner: 12vw; } }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Guided North Consulting, home">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 341.47 71.5" aria-hidden="true" focusable="false" style="height:38px;width:auto;display:block"><style>.nl0{fill:#2D6A9F}.nl1{fill:#2A7D4F}</style><rect class="nl0" width="4.47" height="71.5"/><g><path class="nl0" d="M32.82,35.17c-1.7,0-3.23-.2-4.6-.59-1.37-.4-2.55-.99-3.54-1.78s-1.75-1.77-2.28-2.94c-.53-1.17-.79-2.52-.79-4.05 0-1.55.28-2.92.83-4.12.56-1.2,1.35-2.21,2.38-3.04,1.03-.83,2.25-1.46,3.68-1.88,1.42-.42,3-.64,4.74-.64 2.06,0,3.83.29,5.32.86,1.49.58,2.66,1.38,3.52,2.42.86,1.04,1.34,2.27,1.46,3.71h-3.62c-.25-.75-.65-1.41-1.2-1.97-.56-.56-1.29-.99-2.19-1.3-.91-.31-2-.47-3.28-.47-1.64,0-3.04.26-4.2.79-1.16.53-2.04,1.27-2.65,2.24-.6.96-.91,2.09-.91,3.4 0,1.26.26,2.35.79,3.27.53.92,1.34,1.62,2.45,2.11,1.1.49,2.51.74,4.23.74 1.32,0,2.49-.17,3.5-.52,1.01-.35,1.85-.82,2.53-1.42.68-.59,1.16-1.26,1.44-2l1.47-.54c-.25,2.43-1.17,4.33-2.76,5.69C37.55,34.49,35.44,35.17,32.82,35.17zM40.94,34.8c0-.58.04-1.26.11-2.02.08-.76.17-1.54.28-2.32.11-.78.22-1.5.31-2.17h-8.38v-2.41h10.92v8.92H40.94z"/><path class="nl0" d="M70.63,26.71V16.49h3.76V27.1c0,1.21-.17,2.26-.52,3.17-.35.91-.84,1.67-1.49,2.29-.64.62-1.39,1.13-2.25,1.51-.86.39-1.79.67-2.8.83-1.01.17-2.07.25-3.18.25-1.15,0-2.25-.08-3.28-.25-1.04-.17-1.99-.45-2.84-.83-.86-.39-1.6-.89-2.22-1.51-.62-.62-1.11-1.39-1.46-2.29s-.52-1.96-.52-3.17V16.49h3.76v10.22c0,1.43.28,2.52.85,3.27.57.75,1.34,1.26,2.33,1.53.99.27,2.12.41,3.38.41 1.23,0,2.33-.14,3.3-.41.97-.27,1.75-.78,2.32-1.53C70.34,29.23,70.63,28.14,70.63,26.71z"/><path class="nl0" d="M84.95,16.49h3.76V34.8h-3.76V16.49z"/><path class="nl0" d="M109.71,16.49c2.06,0,3.77.25,5.15.74,1.38.49,2.48,1.16,3.3,2,.82.84,1.41,1.81,1.75,2.9s.52,2.25.52,3.45c0,1.21-.19,2.37-.58,3.48s-1,2.1-1.84,2.96c-.84.86-1.94,1.54-3.31,2.04-1.37.5-3.03.75-5,.75H99.24V16.49H109.71zM103,31.57h6.62c1.36,0,2.49-.17,3.38-.5.9-.33,1.61-.78,2.14-1.34.53-.57.91-1.21,1.13-1.92.23-.72.34-1.46.34-2.24 0-.77-.11-1.51-.34-2.21-.23-.7-.6-1.32-1.13-1.87-.53-.55-1.24-.98-2.14-1.3-.9-.32-2.02-.48-3.38-.48H103V31.57z"/><path class="nl0" d="M133.54,27.16v4.5h14.12v3.14h-17.89V16.49h17.86v3.14h-14.09v4.56h11.55v2.97H133.54z"/><path class="nl0" d="M167.68,16.49c2.05,0,3.77.25,5.15.74,1.38.49,2.48,1.16,3.3,2,.82.84,1.41,1.81,1.76,2.9.35,1.09.52,2.25.52,3.45 0,1.21-.2,2.37-.58,3.48-.39,1.11-1,2.1-1.84,2.96-.84.86-1.94,1.54-3.31,2.04-1.37.5-3.03.75-4.99.75H157.2V16.49H167.68zM160.97,31.57h6.62c1.36,0,2.49-.17,3.38-.5s1.61-.78,2.14-1.34c.53-.57.91-1.21,1.13-1.92.23-.72.34-1.46.34-2.24 0-.77-.11-1.51-.34-2.21c-.22-.7-.6-1.32-1.13-1.87-.53-.55-1.24-.98-2.14-1.3-.9-.32-2.02-.48-3.38-.48h-6.62V31.57z"/></g><g><path class="nl1" d="M33.19,51.46c-.09.63-.3,1.17-.64,1.62-.34.46-.77.81-1.29,1.05-.52.25-1.11.37-1.75.37-.6,0-1.15-.11-1.66-.32-.51-.21-.95-.51-1.33-.9-.38-.39-.68-.87-.89-1.42-.21-.55-.32-1.17-.32-1.85 0-.69.11-1.31.32-1.86.21-.55.51-1.02.89-1.41.38-.39.82-.69,1.33-.9.51-.21,1.06-.31,1.66-.31.65,0,1.24.12,1.76.37.52.25.95.6,1.29,1.06.34.46.55,1.01.64,1.64h-.99c-.13-.45-.32-.82-.58-1.13-.26-.3-.58-.54-.95-.7-.37-.16-.76-.24-1.18-.24-.55,0-1.06.13-1.54.4s-.86.66-1.16,1.18c-.29.52-.44,1.15-.44,1.9 0,.75.15,1.39.44,1.9.29.52.68.91,1.16,1.18s.99.4,1.54.4c.42,0,.81-.08,1.17-.23.36-.16.67-.39.94-.69s.46-.67.58-1.11H33.19z"/><path class="nl1" d="M46.15,54.5c-.8,0-1.52-.19-2.17-.56-.65-.37-1.16-.89-1.55-1.56-.38-.67-.58-1.46-.58-2.37s.19-1.7.58-2.38c.38-.67.9-1.2,1.55-1.56.65-.37,1.37-.55,2.17-.55.8,0,1.52.18,2.17.55.65.37,1.16.89,1.55,1.56.38.68.58,1.47.58,2.38s-.19,1.7-.58,2.37c-.38.67-.9,1.19-1.55,1.56C47.67,54.32,46.95,54.5,46.15,54.5zM46.15,53.5c.61,0,1.15-.13,1.64-.4.48-.26.87-.65,1.15-1.17.29-.52.43-1.16.43-1.92s-.14-1.4-.43-1.91c-.29-.51-.67-.9-1.15-1.17-.48-.27-1.03-.4-1.64-.4-.6,0-1.14.13-1.63.4-.49.27-.87.66-1.16,1.17-.29.51-.43,1.15-.43,1.91s.14,1.4.43,1.92c.29.52.67.91,1.16,1.17C45.01,53.37,45.55,53.5,46.15,53.5z"/><path class="nl1" d="M66.24,53.1l-.29.09v-7.53h1.07v8.71h-1.07l-5.66-7.43.29-.09v7.52h-1.07v-8.71h1.07L66.24,53.1z"/><path class="nl1" d="M75.89,51.54h.97c.03.38.14.71.34,1.01.2.29.47.53.81.7.34.17.75.25,1.21.25.4,0,.74-.06,1.01-.18.27-.12.48-.29.62-.5s.21-.46.21-.75c0-.29-.07-.53-.21-.71-.14-.18-.35-.33-.62-.46s-.59-.25-.95-.36c-.35-.11-.7-.23-1.06-.38s-.69-.32-1-.52c-.31-.21-.56-.45-.74-.74-.19-.29-.28-.64-.28-1.05 0-.4.11-.78.33-1.13.22-.35.54-.64.97-.86.42-.22.94-.33,1.54-.33.94,0,1.64.25,2.1.76s.69,1.18.67,2.02h-.97c-.02-.63-.2-1.09-.54-1.37-.34-.28-.78-.42-1.33-.42-.46,0-.85.1-1.19.31-.34.21-.51.54-.51.99 0,.2.04.37.11.52.08.15.2.28.38.41s.41.25.71.37.67.25,1.11.4c.29.09.58.2.88.32.3.13.58.28.83.47.25.19.46.43.62.72s.23.65.23,1.09c0,.42-.1.81-.3,1.17-.2.36-.51.65-.94.88-.42.22-.97.34-1.64.34-.57,0-1.06-.08-1.47-.23s-.74-.36-1-.61c-.26-.25-.46-.51-.6-.78-.14-.27-.23-.53-.27-.77C75.86,51.86,75.85,51.67,75.89,51.54z"/><path class="nl1" d="M97.15,51.02v-5.36h1.07v5.36c0,.49-.06.93-.17,1.31-.12.38-.28.71-.49.99-.21.28-.46.5-.76.68-.29.17-.62.3-.99.39-.36.08-.75.13-1.16.13-.42,0-.81-.04-1.18-.13-.37-.08-.7-.21-1-.39-.3-.17-.55-.4-.76-.68-.21-.28-.37-.61-.49-.99s-.17-.82-.17-1.31v-5.36h1.07v5.36c0,.67.12,1.18.35,1.54.23.36.54.6.92.74.38.13.8.2,1.26.2.45,0,.86-.07,1.23-.2.38-.13.68-.38.91-.74C97.03,52.2,97.15,51.69,97.15,51.02z"/><path class="nl1" d="M108.76,45.65v7.71h4.83v1.01h-5.9v-8.71H108.76z"/><path class="nl1" d="M121.78,45.65h6.97v1.01h-6.97V45.65zM124.73,46.55h1.07v7.82h-1.07V46.55z"/><path class="nl1" d="M137.61,45.65h1.07v8.71h-1.07V45.65z"/><path class="nl1" d="M155.15,53.1l-.29.09v-7.53h1.07v8.71h-1.07l-5.66-7.43.29-.09v7.52h-1.07v-8.71h1.07L155.15,53.1z"/><path class="nl1" d="M169.09,54.5c-.63,0-1.2-.11-1.71-.32-.5-.21-.94-.52-1.29-.91-.36-.39-.63-.86-.82-1.4-.19-.54-.28-1.14-.28-1.8 0-.66.1-1.27.31-1.83.21-.56.5-1.04.87-1.45.38-.41.82-.72,1.33-.95.51-.22,1.08-.33,1.7-.33.67,0,1.26.13,1.78.38.52.25.94.61,1.26,1.07.32.46.51,1,.58,1.62h-.91c-.12-.43-.3-.8-.56-1.11-.26-.31-.57-.54-.93-.71-.36-.17-.77-.25-1.21-.25-.62,0-1.16.15-1.63.46-.47.31-.84.73-1.11,1.27-.27.54-.4,1.14-.4,1.82s.12,1.28.36,1.79c.24.51.59.91,1.05,1.2s1,.43,1.62.43c.48,0,.91-.09,1.27-.28.36-.19.65-.46.88-.82.22-.36.38-.81.46-1.33h.66c-.14,1.15-.5,2.02-1.09,2.59C170.68,54.22,169.96,54.5,169.09,54.5zM172.13,54.37c0-.29.01-.63.02-1 .01-.37.03-.75.06-1.13.03-.38.05-.73.07-1.03h-2.95V50.2h3.85v4.17H172.13z"/></g><g><path d="M213.37,31.07l-1.19.48V16.49h3.76V34.8h-3.76l-14.8-14.46,1.19-.48V34.8h-3.76V16.49h3.76L213.37,31.07z"/><path d="M236.86,35.17c-2.43,0-4.51-.38-6.24-1.15s-3.05-1.85-3.96-3.27c-.92-1.42-1.37-3.11-1.37-5.09 0-2,.46-3.71,1.37-5.12.92-1.42,2.24-2.5,3.96-3.27s3.81-1.15,6.24-1.15c2.45,0,4.54.38,6.25,1.15s3.03,1.85,3.95,3.27c.92,1.42,1.37,3.12,1.37,5.12 0,1.98-.46,3.68-1.37,5.09s-2.23,2.5-3.95,3.27S239.32,35.17,236.86,35.17zM236.86,31.91c1.51,0,2.83-.23,3.98-.68,1.14-.45,2.04-1.14,2.69-2.07.65-.92.98-2.09.98-3.51s-.33-2.58-.98-3.51c-.65-.92-1.55-1.62-2.69-2.08-1.14-.46-2.47-.69-3.98-.69-1.49,0-2.82.23-3.99.69-1.17.46-2.08,1.16-2.75,2.08-.66.92-.99,2.09-.99,3.51s.33,2.59.99,3.51c.66.92,1.58,1.61,2.75,2.07C234.04,31.69,235.37,31.91,236.86,31.91z"/><path d="M257.78,34.8V16.49h12.42c1.42,0,2.65.19,3.69.58,1.05.39,1.86.99,2.45,1.81s.88,1.87.88,3.16c0,.87-.15,1.6-.45,2.21-.3.6-.72,1.09-1.26,1.47-.54.38-1.16.67-1.85.86-.7.2-1.44.33-2.24.38l-.4-.23c1.32.02,2.41.13,3.25.33.85.2,1.49.56,1.91,1.08s.64,1.29.64,2.31v4.36h-3.76v-4.1c0-.7-.12-1.24-.37-1.63-.25-.39-.68-.66-1.32-.81s-1.54-.23-2.73-.23h-7.1v6.76H257.78zM261.54,25.09h8.66c1.06,0,1.86-.25,2.42-.76.56-.51.83-1.2.83-2.07 0-.83-.28-1.46-.83-1.9s-1.36-.65-2.42-.65h-8.66V25.09z"/><path d="M285.2,16.49h19.3v3.14h-19.3V16.49zM292.99,19.23h3.76V34.8h-3.76V19.23z"/><path d="M312.91,16.49h3.76V34.8h-3.76V16.49zM316.22,24.05h14.52v3.14h-14.52V24.05zM330.12,16.49h3.76V34.8h-3.76V16.49z"/></g></svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#who">Who We Serve</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="#about" class="mobile-nav-link">About</a></li>
+    <li><a href="#services" class="mobile-nav-link">Services</a></li>
+    <li><a href="#who" class="mobile-nav-link">Who We Serve</a></li>
+    <li><a href="#why" class="mobile-nav-link">Why Us</a></li>
+  </ul>
+  <a href="#contact" class="mobile-cta mobile-nav-link">Get in touch</a>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="home" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Clear direction. Practical execution. Real impact.</p>
+      <h1 class="hero-heading" id="hero-heading">Digital strategy for organizations<br><em>doing good work.</em></h1>
+      <p class="hero-sub">Guided North brings senior digital leadership to nonprofits, civic organizations, and mission-driven businesses without the overhead of a full-time hire.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Start a conversation</a>
+        <a href="#services" class="btn-secondary">See how we work</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card-stack">
+        <div class="hero-card hero-card-1">
+          <div class="hero-card-dot" style="background:var(--blue)"></div>
+          <div class="hero-card-label">Digital Strategy</div>
+          <div class="hero-card-title">A roadmap that actually gets used</div>
+          <div class="hero-card-body">Prioritized, realistic, and aligned to what your organization can execute.</div>
+        </div>
+        <div class="hero-card hero-card-2">
+          <div class="hero-card-dot" style="background:var(--green)"></div>
+          <div class="hero-card-label">Real Impact</div>
+          <div class="hero-card-title">Outcomes over outputs</div>
+          <div class="hero-card-body">Every engagement is measured by what changes for the people and communities you serve.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" aria-labelledby="about-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">About Guided North</p>
+    <h2 class="section-heading reveal" id="about-heading">Digital expertise,<br><em>mission-first mindset</em></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Guided North Consulting was founded on a simple belief: <strong>good organizations deserve the same quality of digital thinking</strong> as the world's largest companies, without the enterprise price tag or the consultant-speak.</p>
+        <p>We bring 20+ years of senior digital product, engineering, and platform leadership across for-profit and mission-driven organizations. From building Target's first mobile commerce experience to leading the Open Y platform adopted by 70+ YMCAs across North America, our work has consistently bridged rigorous digital execution with meaningful impact.</p>
+        <p>Guided North exists to bring that experience directly to the organizations doing the most important work, <strong>on a scale and budget that fits</strong>.</p>
+        <div class="about-cta-group">
+          <a href="https://www.linkedin.com/in/craigpaulnock/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Connect on LinkedIn <span aria-hidden="true">&nbsp;&#8599;</span><span class="sr-only">(opens in new tab)</span>
+          </a>
+          <a href="#contact" class="btn-secondary">Send us a message</a>
+        </div>
+      </div>
+      <div class="about-stats reveal" role="list" aria-label="Career highlights">
+        <div class="stat-card" role="listitem">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years of senior digital leadership</div>
+        </div>
+        <div class="stat-card green" role="listitem">
+          <div class="stat-number">70+</div>
+          <div class="stat-label">YMCAs on the Open Y platform</div>
+        </div>
+        <div class="stat-card green" role="listitem">
+          <div class="stat-number">$300M+</div>
+          <div class="stat-label">Mobile revenue scaled at Target</div>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="stat-number">2x</div>
+          <div class="stat-label">NBCOlympics.com platform launches</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">What We Do</p>
+    <h2 class="section-heading reveal" id="services-heading">Practical services for <em>the work that matters</em></h2>
+    <p class="section-lead reveal" style="max-width:520px">Every engagement is scoped for your capacity, focused on what moves the needle, and designed to leave your team stronger.</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">&#128506;</div>
+        <h3 class="service-title">Digital Strategy</h3>
+        <p class="service-desc">Roadmaps, prioritization, and delivery leadership for organizations without a full-time digital leader. Get clarity on what to build, in what order, and why, grounded in your actual capacity and goals.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">&#128202;</div>
+        <h3 class="service-title">CRM &amp; Data Activation</h3>
+        <p class="service-desc">Turn disconnected data into practical insight, better outreach, and smarter operations. We help you make sense of what you already have and build toward what you need.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">&#9881;</div>
+        <h3 class="service-title">AI Advisory</h3>
+        <p class="service-desc">Practical AI adoption without the hype. We help you identify where AI genuinely reduces friction or extends your team's capacity, and steer clear of the tools that don't deliver.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">&#10022;</div>
+        <h3 class="service-title">Digital Experience Consulting</h3>
+        <p class="service-desc">Improve websites, apps, and service experiences for the people you serve. From UX audits to product strategy, we help you close the gap between your digital presence and your mission.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="who" id="who" aria-labelledby="who-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Who We Serve</p>
+    <h2 class="section-heading reveal" id="who-heading">Built for organizations <em>doing good work</em></h2>
+    <p class="section-lead reveal">We partner with organizations where digital impact is mission-critical but full-time digital leadership isn't always in reach.</p>
+    <div class="who-grid">
+      <div class="who-card reveal">
+        <span class="who-icon" aria-hidden="true">&#127963;</span>
+        <div class="who-title">Nonprofits &amp; Foundations</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon" aria-hidden="true">&#127961;</span>
+        <div class="who-title">Civic &amp; Government-Adjacent Organizations</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon" aria-hidden="true">&#129309;</span>
+        <div class="who-title">Associations &amp; Membership Organizations</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon" aria-hidden="true">&#127807;</span>
+        <div class="who-title">Mission-Driven Businesses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY GUIDED NORTH -->
+<section class="why" id="why" aria-labelledby="why-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Why Guided North</p>
+    <h2 class="section-heading reveal" id="why-heading">Senior thinking,<br><em>without the overhead</em></h2>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="why-num" aria-hidden="true">01</div>
+        <p class="why-title">Been in the room</p>
+        <p class="why-body">Two decades leading digital product, engineering, and platform at scale. Not advising from the sidelines, but doing the work alongside teams like yours.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num" aria-hidden="true">02</div>
+        <p class="why-title">Mission-fluent</p>
+        <p class="why-body">Deep experience in compliance-heavy, resource-constrained environments. We understand the constraints nonprofits and civic organizations operate under.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num" aria-hidden="true">03</div>
+        <p class="why-title">No jargon, no fluff</p>
+        <p class="why-body">Recommendations you can act on. We measure success by what changes for the people your organization serves, not by deliverable count or slide deck thickness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Get in Touch</p>
+    <h2 class="section-heading reveal" id="contact-heading">Let's talk about <em>what's possible</em></h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p>Whether you have a specific project in mind or just want to think through a digital challenge, we're happy to have a conversation. No pitch, no pressure.</p>
+        <a href="https://www.linkedin.com/in/craigpaulnock/" target="_blank" rel="noopener noreferrer" class="contact-detail">
+          <span class="contact-detail-icon" aria-hidden="true">&#128188;</span>
+          LinkedIn <span class="sr-only">(opens in new tab)</span>
+        </a>
+        <p style="margin-top:1.5rem;font-size:0.875rem;color:var(--muted)">Based in Minneapolis, MN. Available for remote and on-site engagements.</p>
+      </div>
+
+      <div class="reveal">
+        <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+          <input type="hidden" name="access_key" value="e5362ea6-0d7e-4b66-931b-bcc5d552e53d">
+          <input type="hidden" name="subject" value="New inquiry from Guided North website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="fname" name="name" autocomplete="name"
+                aria-required="true" aria-describedby="fname-error" placeholder="Your name">
+              <span class="field-error" id="fname-error" role="alert">Please enter your name.</span>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email <span class="req" aria-label="required">*</span></label>
+              <input type="email" id="femail" name="email" autocomplete="email"
+                aria-required="true" aria-describedby="femail-error" placeholder="you@organization.org">
+              <span class="field-error" id="femail-error" role="alert">Please enter a valid email address.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="forg">Organization</label>
+            <input type="text" id="forg" name="organization" autocomplete="organization" placeholder="Your organization">
+          </div>
+
+          <div class="form-group">
+            <label for="finterest">Area of interest</label>
+            <select id="finterest" name="interest">
+              <option value="">Select one...</option>
+              <option>Digital Strategy</option>
+              <option>CRM &amp; Data Activation</option>
+              <option>AI Advisory</option>
+              <option>Digital Experience Consulting</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fmessage">Message <span class="req" aria-label="required">*</span></label>
+            <textarea id="fmessage" name="message"
+              aria-required="true" aria-describedby="fmessage-error"
+              placeholder="Tell us a bit about what you're working on..."></textarea>
+            <span class="field-error" id="fmessage-error" role="alert">Please include a message.</span>
+          </div>
+
+          <div class="h-captcha" data-captcha="true"></div>
+
+          <button type="submit" class="form-submit" id="submitBtn">Send message</button>
+          <p class="form-note">Protected by hCaptcha. Your information is never shared or sold.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess" role="alert" aria-live="polite" aria-atomic="true" tabindex="-1">
+          <div class="form-success-icon" aria-hidden="true">&#10003;</div>
+          <h3>Message sent</h3>
+          <p>Thanks for reaching out. We'll be in touch within 1 to 2 business days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <a href="#" class="footer-logo" aria-label="Guided North Consulting, back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.47 71.5" aria-hidden="true" focusable="false" style="height:28px;width:auto;display:block;opacity:0.65"><style>.fl0{fill:#6aaedb}.fl1{fill:#5dbf8a}.fl2{fill:rgba(255,255,255,0.7)}</style><rect class="fl0" width="4.47" height="71.5"/><g><path class="fl0" d="M32.82,35.17c-1.7,0-3.23-.2-4.6-.59-1.37-.4-2.55-.99-3.54-1.78s-1.75-1.77-2.28-2.94c-.53-1.17-.79-2.52-.79-4.05 0-1.55.28-2.92.83-4.12.56-1.2,1.35-2.21,2.38-3.04,1.03-.83,2.25-1.46,3.68-1.88,1.42-.42,3-.64,4.74-.64 2.06,0,3.83.29,5.32.86,1.49.58,2.66,1.38,3.52,2.42.86,1.04,1.34,2.27,1.46,3.71h-3.62c-.25-.75-.65-1.41-1.2-1.97-.56-.56-1.29-.99-2.19-1.3-.91-.31-2-.47-3.28-.47-1.64,0-3.04.26-4.2.79-1.16.53-2.04,1.27-2.65,2.24-.6.96-.91,2.09-.91,3.4 0,1.26.26,2.35.79,3.27.53.92,1.34,1.62,2.45,2.11,1.1.49,2.51.74,4.23.74 1.32,0,2.49-.17,3.5-.52,1.01-.35,1.85-.82,2.53-1.42.68-.59,1.16-1.26,1.44-2l1.47-.54c-.25,2.43-1.17,4.33-2.76,5.69C37.55,34.49,35.44,35.17,32.82,35.17zM40.94,34.8c0-.58.04-1.26.11-2.02.08-.76.17-1.54.28-2.32.11-.78.22-1.5.31-2.17h-8.38v-2.41h10.92v8.92H40.94z"/><path class="fl0" d="M70.63,26.71V16.49h3.76V27.1c0,1.21-.17,2.26-.52,3.17-.35.91-.84,1.67-1.49,2.29-.64.62-1.39,1.13-2.25,1.51-.86.39-1.79.67-2.8.83-1.01.17-2.07.25-3.18.25-1.15,0-2.25-.08-3.28-.25-1.04-.17-1.99-.45-2.84-.83-.86-.39-1.6-.89-2.22-1.51-.62-.62-1.11-1.39-1.46-2.29s-.52-1.96-.52-3.17V16.49h3.76v10.22c0,1.43.28,2.52.85,3.27.57.75,1.34,1.26,2.33,1.53.99.27,2.12.41,3.38.41 1.23,0,2.33-.14,3.3-.41.97-.27,1.75-.78,2.32-1.53C70.34,29.23,70.63,28.14,70.63,26.71z"/><path class="fl0" d="M84.95,16.49h3.76V34.8h-3.76V16.49z"/><path class="fl0" d="M109.71,16.49c2.06,0,3.77.25,5.15.74,1.38.49,2.48,1.16,3.3,2,.82.84,1.41,1.81,1.75,2.9s.52,2.25.52,3.45c0,1.21-.19,2.37-.58,3.48s-1,2.1-1.84,2.96c-.84.86-1.94,1.54-3.31,2.04-1.37.5-3.03.75-5,.75H99.24V16.49H109.71zM103,31.57h6.62c1.36,0,2.49-.17,3.38-.5.9-.33,1.61-.78,2.14-1.34.53-.57.91-1.21,1.13-1.92.23-.72.34-1.46.34-2.24 0-.77-.11-1.51-.34-2.21-.23-.7-.6-1.32-1.13-1.87-.53-.55-1.24-.98-2.14-1.3-.9-.32-2.02-.48-3.38-.48H103V31.57z"/><path class="fl0" d="M133.54,27.16v4.5h14.12v3.14h-17.89V16.49h17.86v3.14h-14.09v4.56h11.55v2.97H133.54z"/><path class="fl0" d="M167.68,16.49c2.05,0,3.77.25,5.15.74,1.38.49,2.48,1.16,3.3,2,.82.84,1.41,1.81,1.76,2.9.35,1.09.52,2.25.52,3.45 0,1.21-.2,2.37-.58,3.48-.39,1.11-1,2.1-1.84,2.96-.84.86-1.94,1.54-3.31,2.04-1.37.5-3.03.75-4.99.75H157.2V16.49H167.68zM160.97,31.57h6.62c1.36,0,2.49-.17,3.38-.5s1.61-.78,2.14-1.34c.53-.57.91-1.21,1.13-1.92.23-.72.34-1.46.34-2.24 0-.77-.11-1.51-.34-2.21c-.22-.7-.6-1.32-1.13-1.87-.53-.55-1.24-.98-2.14-1.3-.9-.32-2.02-.48-3.38-.48h-6.62V31.57z"/></g><g><path class="fl1" d="M33.19,51.46c-.09.63-.3,1.17-.64,1.62-.34.46-.77.81-1.29,1.05-.52.25-1.11.37-1.75.37-.6,0-1.15-.11-1.66-.32-.51-.21-.95-.51-1.33-.9-.38-.39-.68-.87-.89-1.42-.21-.55-.32-1.17-.32-1.85 0-.69.11-1.31.32-1.86.21-.55.51-1.02.89-1.41.38-.39.82-.69,1.33-.9.51-.21,1.06-.31,1.66-.31.65,0,1.24.12,1.76.37.52.25.95.6,1.29,1.06.34.46.55,1.01.64,1.64h-.99c-.13-.45-.32-.82-.58-1.13-.26-.3-.58-.54-.95-.7-.37-.16-.76-.24-1.18-.24-.55,0-1.06.13-1.54.4s-.86.66-1.16,1.18c-.29.52-.44,1.15-.44,1.9 0,.75.15,1.39.44,1.9.29.52.68.91,1.16,1.18s.99.4,1.54.4c.42,0,.81-.08,1.17-.23.36-.16.67-.39.94-.69s.46-.67.58-1.11H33.19z"/><path class="fl1" d="M46.15,54.5c-.8,0-1.52-.19-2.17-.56-.65-.37-1.16-.89-1.55-1.56-.38-.67-.58-1.46-.58-2.37s.19-1.7.58-2.38c.38-.67.9-1.2,1.55-1.56.65-.37,1.37-.55,2.17-.55.8,0,1.52.18,2.17.55.65.37,1.16.89,1.55,1.56.38.68.58,1.47.58,2.38s-.19,1.7-.58,2.37c-.38.67-.9,1.19-1.55,1.56C47.67,54.32,46.95,54.5,46.15,54.5zM46.15,53.5c.61,0,1.15-.13,1.64-.4.48-.26.87-.65,1.15-1.17.29-.52.43-1.16.43-1.92s-.14-1.4-.43-1.91c-.29-.51-.67-.9-1.15-1.17-.48-.27-1.03-.4-1.64-.4-.6,0-1.14.13-1.63.4-.49.27-.87.66-1.16,1.17-.29.51-.43,1.15-.43,1.91s.14,1.4.43,1.92c.29.52.67.91,1.16,1.17C45.01,53.37,45.55,53.5,46.15,53.5z"/><path class="fl1" d="M66.24,53.1l-.29.09v-7.53h1.07v8.71h-1.07l-5.66-7.43.29-.09v7.52h-1.07v-8.71h1.07L66.24,53.1z"/><path class="fl1" d="M75.89,51.54h.97c.03.38.14.71.34,1.01.2.29.47.53.81.7.34.17.75.25,1.21.25.4,0,.74-.06,1.01-.18.27-.12.48-.29.62-.5s.21-.46.21-.75c0-.29-.07-.53-.21-.71-.14-.18-.35-.33-.62-.46s-.59-.25-.95-.36c-.35-.11-.7-.23-1.06-.38s-.69-.32-1-.52c-.31-.21-.56-.45-.74-.74-.19-.29-.28-.64-.28-1.05 0-.4.11-.78.33-1.13.22-.35.54-.64.97-.86.42-.22.94-.33,1.54-.33.94,0,1.64.25,2.1.76s.69,1.18.67,2.02h-.97c-.02-.63-.2-1.09-.54-1.37-.34-.28-.78-.42-1.33-.42-.46,0-.85.1-1.19.31-.34.21-.51.54-.51.99 0,.2.04.37.11.52.08.15.2.28.38.41s.41.25.71.37.67.25,1.11.4c.29.09.58.2.88.32.3.13.58.28.83.47.25.19.46.43.62.72s.23.65.23,1.09c0,.42-.1.81-.3,1.17-.2.36-.51.65-.94.88-.42.22-.97.34-1.64.34-.57,0-1.06-.08-1.47-.23s-.74-.36-1-.61c-.26-.25-.46-.51-.6-.78-.14-.27-.23-.53-.27-.77C75.86,51.86,75.85,51.67,75.89,51.54z"/><path class="fl1" d="M97.15,51.02v-5.36h1.07v5.36c0,.49-.06.93-.17,1.31-.12.38-.28.71-.49.99-.21.28-.46.5-.76.68-.29.17-.62.3-.99.39-.36.08-.75.13-1.16.13-.42,0-.81-.04-1.18-.13-.37-.08-.7-.21-1-.39-.3-.17-.55-.4-.76-.68-.21-.28-.37-.61-.49-.99s-.17-.82-.17-1.31v-5.36h1.07v5.36c0,.67.12,1.18.35,1.54.23.36.54.6.92.74.38.13.8.2,1.26.2.45,0,.86-.07,1.23-.2.38-.13.68-.38.91-.74C97.03,52.2,97.15,51.69,97.15,51.02z"/><path class="fl1" d="M108.76,45.65v7.71h4.83v1.01h-5.9v-8.71H108.76z"/><path class="fl1" d="M121.78,45.65h6.97v1.01h-6.97V45.65zM124.73,46.55h1.07v7.82h-1.07V46.55z"/><path class="fl1" d="M137.61,45.65h1.07v8.71h-1.07V45.65z"/><path class="fl1" d="M155.15,53.1l-.29.09v-7.53h1.07v8.71h-1.07l-5.66-7.43.29-.09v7.52h-1.07v-8.71h1.07L155.15,53.1z"/><path class="fl1" d="M169.09,54.5c-.63,0-1.2-.11-1.71-.32-.5-.21-.94-.52-1.29-.91-.36-.39-.63-.86-.82-1.4-.19-.54-.28-1.14-.28-1.8 0-.66.1-1.27.31-1.83.21-.56.5-1.04.87-1.45.38-.41.82-.72,1.33-.95.51-.22,1.08-.33,1.7-.33.67,0,1.26.13,1.78.38.52.25.94.61,1.26,1.07.32.46.51,1,.58,1.62h-.91c-.12-.43-.3-.8-.56-1.11-.26-.31-.57-.54-.93-.71-.36-.17-.77-.25-1.21-.25-.62,0-1.16.15-1.63.46-.47.31-.84.73-1.11,1.27-.27.54-.4,1.14-.4,1.82s.12,1.28.36,1.79c.24.51.59.91,1.05,1.2s1,.43,1.62.43c.48,0,.91-.09,1.27-.28.36-.19.65-.46.88-.82.22-.36.38-.81.46-1.33h.66c-.14,1.15-.5,2.02-1.09,2.59C170.68,54.22,169.96,54.5,169.09,54.5zM172.13,54.37c0-.29.01-.63.02-1 .01-.37.03-.75.06-1.13.03-.38.05-.73.07-1.03h-2.95V50.2h3.85v4.17H172.13z"/></g><g><path class="fl2" d="M213.37,31.07l-1.19.48V16.49h3.76V34.8h-3.76l-14.8-14.46,1.19-.48V34.8h-3.76V16.49h3.76L213.37,31.07z"/><path class="fl2" d="M236.86,35.17c-2.43,0-4.51-.38-6.24-1.15s-3.05-1.85-3.96-3.27c-.92-1.42-1.37-3.11-1.37-5.09 0-2,.46-3.71,1.37-5.12.92-1.42,2.24-2.5,3.96-3.27s3.81-1.15,6.24-1.15c2.45,0,4.54.38,6.25,1.15s3.03,1.85,3.95,3.27c.92,1.42,1.37,3.12,1.37,5.12 0,1.98-.46,3.68-1.37,5.09s-2.23,2.5-3.95,3.27S239.32,35.17,236.86,35.17zM236.86,31.91c1.51,0,2.83-.23,3.98-.68,1.14-.45,2.04-1.14,2.69-2.07.65-.92.98-2.09.98-3.51s-.33-2.58-.98-3.51c-.65-.92-1.55-1.62-2.69-2.08-1.14-.46-2.47-.69-3.98-.69-1.49,0-2.82.23-3.99.69-1.17.46-2.08,1.16-2.75,2.08-.66.92-.99,2.09-.99,3.51s.33,2.59.99,3.51c.66.92,1.58,1.61,2.75,2.07C234.04,31.69,235.37,31.91,236.86,31.91z"/><path class="fl2" d="M257.78,34.8V16.49h12.42c1.42,0,2.65.19,3.69.58,1.05.39,1.86.99,2.45,1.81s.88,1.87.88,3.16c0,.87-.15,1.6-.45,2.21-.3.6-.72,1.09-1.26,1.47-.54.38-1.16.67-1.85.86-.7.2-1.44.33-2.24.38l-.4-.23c1.32.02,2.41.13,3.25.33.85.2,1.49.56,1.91,1.08s.64,1.29.64,2.31v4.36h-3.76v-4.1c0-.7-.12-1.24-.37-1.63-.25-.39-.68-.66-1.32-.81s-1.54-.23-2.73-.23h-7.1v6.76H257.78zM261.54,25.09h8.66c1.06,0,1.86-.25,2.42-.76.56-.51.83-1.2.83-2.07 0-.83-.28-1.46-.83-1.9s-1.36-.65-2.42-.65h-8.66V25.09z"/><path class="fl2" d="M285.2,16.49h19.3v3.14h-19.3V16.49zM292.99,19.23h3.76V34.8h-3.76V19.23z"/><path class="fl2" d="M312.91,16.49h3.76V34.8h-3.76V16.49zM316.22,24.05h14.52v3.14h-14.52V24.05zM330.12,16.49h3.76V34.8h-3.76V16.49z"/></g></svg>
+  </a>
+  <p>&#169; 2026 Guided North Consulting LLC &middot; Minneapolis, MN</p>
+  <a href="#contact" class="footer-link">Get in touch</a>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  navToggle.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+    navToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  });
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open navigation menu');
+    });
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formSuccess = document.getElementById('formSuccess');
+
+  function validateField(input) {
+    const errorEl = document.getElementById(input.id + '-error');
+    if (!errorEl) return true;
+    let valid = true;
+    if (input.getAttribute('aria-required') === 'true' && !input.value.trim()) valid = false;
+    if (input.type === 'email' && input.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) valid = false;
+    input.setAttribute('aria-invalid', String(!valid));
+    errorEl.classList.toggle('visible', !valid);
+    return valid;
+  }
+
+  ['fname', 'femail', 'fmessage'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('blur', () => validateField(el));
+    el.addEventListener('input', () => {
+      if (el.getAttribute('aria-invalid') === 'true') validateField(el);
+    });
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fields = ['fname', 'femail', 'fmessage'].map(id => document.getElementById(id));
+    const allValid = fields.map(validateField).every(Boolean);
+    if (!allValid) {
+      fields.find(f => f.getAttribute('aria-invalid') === 'true')?.focus();
+      return;
+    }
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST', body: new FormData(form)
+      });
+      const result = await res.json();
+      if (result.success) {
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+        formSuccess.focus();
+      } else { throw new Error(); }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+      alert('Something went wrong. Please try again or find us on LinkedIn.');
+    }
+  });
+</script>
+</body>
+</html>
