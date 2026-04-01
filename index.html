@@ -41,7 +41,9 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap"></noscript>
 <script src="https://web3forms.com/client/script.js" async defer></script>
 
 <!-- JSON-LD Structured Data -->
@@ -139,15 +141,13 @@
     clip: rect(0,0,0,0); white-space: nowrap; border: 0;
   }
 
-  /* NAV -- FIX: height:auto + min-height instead of fixed height, flex-wrap for reflow */
+  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0; z-index: 100;
     padding: 0 var(--space-inner);
-    min-height: 64px;
-    height: auto;
+    height: 64px;
     display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap;
     background: rgba(255,255,255,0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -189,10 +189,9 @@
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* FIX: top:auto so it positions below nav regardless of nav height at high zoom */
   .mobile-menu {
     display: none; position: fixed;
-    top: auto; left: 0; right: 0;
+    top: 64px; left: 0; right: 0;
     background: var(--white); border-bottom: 1px solid var(--border);
     padding: 1.25rem var(--space-inner) 1.5rem;
     z-index: 99; box-shadow: var(--shadow-md);
@@ -261,24 +260,22 @@
     opacity: 0; animation: fadeUp 0.8s 0.65s forwards;
   }
 
-  /* FIX: removed white-space:nowrap so button text wraps at high zoom levels */
   .btn-primary {
     display: inline-flex; align-items: center; gap: 0.4rem;
     background: var(--blue); color: var(--white);
     padding: 0.8rem 1.5rem; border-radius: 8px;
     font-size: clamp(0.875rem, 2vw, 0.95rem); font-weight: 500;
-    text-decoration: none; transition: background 0.2s, transform 0.15s;
+    text-decoration: none; transition: background 0.2s, transform 0.15s; white-space: nowrap;
   }
   .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
 
-  /* FIX: removed white-space:nowrap so button text wraps at high zoom levels */
   .btn-secondary {
     display: inline-flex; align-items: center; gap: 0.4rem;
     background: transparent; color: var(--dark);
     padding: 0.8rem 1.5rem; border-radius: 8px;
     font-size: clamp(0.875rem, 2vw, 0.95rem); font-weight: 400;
     text-decoration: none; border: 1.5px solid rgba(17,25,32,0.3);
-    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    transition: border-color 0.2s, color 0.2s, transform 0.15s; white-space: nowrap;
   }
   .btn-secondary:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
 
@@ -461,29 +458,6 @@
 
   @media (min-width: 1400px) { :root { --space-inner: 8vw; } }
   @media (min-width: 1800px) { :root { --space-inner: 12vw; } }
-
-  /* WCAG 1.4.10 Reflow: 320px viewport width = 400% zoom on 1280px screen.
-     All content must be accessible without horizontal scrolling at this size. */
-  @media (max-width: 320px) {
-    :root { --space-inner: 1rem; }
-    nav { padding: 0.5rem var(--space-inner); gap: 0.5rem; }
-    .hero-inner,
-    .about-grid,
-    .services-grid,
-    .contact-grid { grid-template-columns: 1fr; }
-    .about-stats,
-    .who-grid,
-    .why-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .hero-visual { display: none; }
-    .hero-actions { flex-direction: column; }
-    .hero-actions a { width: 100%; justify-content: center; }
-    .about-cta-group a { align-self: stretch; text-align: center; justify-content: center; }
-    .hero-heading { font-size: 1.75rem; }
-    .section-heading { font-size: 1.5rem; }
-    footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-    .stat-number { font-size: 1.5rem; }
-  }
 </style>
 </head>
 <body>
@@ -558,7 +532,10 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <div class="about-person">
-          <img src="headshot.jpg" alt="Craig Paulnock, founder of Guided North Consulting" class="about-headshot" width="72" height="72">
+          <picture>
+            <source srcset="headshot.webp" type="image/webp">
+            <img src="headshot.jpg" alt="Craig Paulnock, founder of Guided North Consulting" class="about-headshot" width="72" height="72" loading="eager">
+          </picture>
           <div>
             <div class="about-name">Craig Paulnock</div>
             <div class="about-title">Founder, Guided North Consulting</div>
@@ -769,6 +746,7 @@
 </footer>
 
 <script>
+  // Dynamic copyright year
   document.getElementById('copy-year').textContent = new Date().getFullYear();
 
   const nav = document.getElementById('nav');
