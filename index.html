@@ -44,7 +44,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap"></noscript>
-<script src="https://web3forms.com/client/script.js" async defer></script>
+<!-- Web3Forms + hCaptcha loaded lazily when contact section is visible -->
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -746,6 +746,24 @@
 </footer>
 
 <script>
+  // Lazy-load Web3Forms + hCaptcha only when contact section scrolls into view
+  let web3formsLoaded = false;
+  const contactSection = document.getElementById('contact');
+  const lazyLoadObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !web3formsLoaded) {
+        web3formsLoaded = true;
+        const script = document.createElement('script');
+        script.src = 'https://web3forms.com/client/script.js';
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+        lazyLoadObserver.disconnect();
+      }
+    });
+  }, { rootMargin: '200px' }); // start loading 200px before it enters view
+  if (contactSection) lazyLoadObserver.observe(contactSection);
+
   // Dynamic copyright year
   document.getElementById('copy-year').textContent = new Date().getFullYear();
 
